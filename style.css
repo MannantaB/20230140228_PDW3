@@ -1,0 +1,98 @@
+body {
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    display: flex;
+    background: white;
+    max-width: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-section {
+    flex: 1;
+    overflow: hidden;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.3); 
+    object-position: -30px center; 
+    transition: transform 0.3s ease;
+}
+
+.text-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.role {
+    color: #6b7280;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.tab-button {
+    display: inline-block;
+    width: 100px;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #6b7280;
+    border-radius: 5px;
+    background: none;
+    cursor: pointer;
+    color: #6b7280;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+    background-color: #6b7280;
+    color: white;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.tab-content {
+    display: none; 
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content h2 {
+    letter-spacing: 1px; 
+}
+
+body {
+    background-color: #a38373; 
+    color: black; 
+}
+

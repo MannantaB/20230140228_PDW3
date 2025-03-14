@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deskripsi Diri</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="image-section">
+            <img src="foto-profil.jpg" alt="Foto Profil">
+        </div>
+        
+        <div class="text-section">
+            <h1 class="name">Mannanta Brilian</h1>
+            <p class="role">Mahasiswa Semester 4 | Web Developer</p>
+            
+            <div class="buttons">
+                <button class="tab-button" data-target="work">WORK</button>
+                <button class="tab-button" data-target="about">ABOUT</button>
+                <button class="tab-button" data-target="contact">CONTACT</button>
+            </div>
+
+            <div class="content">
+                <div id="work" class="tab-content">
+                    <h2>Work</h2>
+                    <p>Menjalani semester 4 sebagai mahasiswa TI penuh dengan tantangan!</p>
+                </div>
+                <div id="about" class="tab-content">
+                    <h2>About</h2>
+                    <p>Aku adalah mahasiswa Teknologi Informasi semester 4 di Universitas Muhammadiyah Yogyakarta.</p>
+                </div>
+                <div id="contact" class="tab-content">
+                    <h2>Contact</h2>
+                    <p>Kalau mau ngobrol atau sekadar sharing, bisa hubungi aku.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttons = document.querySelectorAll(".tab-button");
+            const contents = document.querySelectorAll(".tab-content");
+
+            contents.forEach(content => {
+                content.style.display = "none";
+            });
+
+            buttons.forEach(button => {
+                button.addEventListener("click", () => {
+                    const target = button.getAttribute("data-target");
+
+                    contents.forEach(content => {
+                        content.style.display = "none";
+                    });
+
+                    document.getElementById(target).style.display = "block";
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
